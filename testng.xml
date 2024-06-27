@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+		<listener class-name="utils.Listener"></listener>
+	</listeners>
+	<parameter name="siteUrl" value="https://www.spicejet.com/"></parameter>
+	
+  <test thread-count="5" name="ChromeTest">
+	<parameter name="browser" value="chrome"></parameter>
+    <classes>	
+      <class name="test.SignUpTest"/>
+      <class name="test.LogInTest"/> 
+      <class name="test.SearchFlightTest"/>
+      <class name="test.FlightSelectionTest"/>
+      <class name="test.BookingTest"/>       
+      <class name="test.AddOnsTest"/> 
+      <class name="test.PrePaymentTest"/>    
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="FirefoxTest">
+	<parameter name="browser" value="firefox"></parameter>	
+    <classes>	
+      <class name="test.SignUpTest"/>
+      <class name="test.LogInTest"/> 
+      <class name="test.SearchFlightTest"/>
+      <class name="test.FlightSelectionTest"/>
+      <class name="test.BookingTest"/>       
+      <class name="test.AddOnsTest"/> 
+      <class name="test.PrePaymentTest"/>    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
